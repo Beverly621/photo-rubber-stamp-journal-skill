@@ -2,7 +2,7 @@
 
 # 🧳 Photo Rubber-Stamp Journal
 
-**写真には現実の風景を。紙の上には、その風景の記憶を小さなスタンプとして残します。**
+**一枚の写真を、静かな旅の記録へ。**
 
 <p>
   <a href="./README.md">🇬🇧 <b>English</b></a>
@@ -21,75 +21,55 @@
 
 ---
 
-## 📖 このプロジェクトについて
+## 👀 このプロジェクトについて
 
-**Photo Rubber-Stamp Journal** は、アップロードした写真を1枚ずつ独立した **4:3 横長のトラベルジャーナル・ポスター** に変換する Codex 向け画像生成 Skill です。
+**Photo Rubber-Stamp Journal** は、アップロードした写真を1枚ずつ、正確な **50/50 分割**を使った **4:3 横長のトラベルジャーナル・ポスター**へ変換する Codex 向け画像生成 Skill です。
 
-画面は中央で正確に二分されます。
+⬅️ **左側 · 写真：** アップロードした風景を、元の写真として認識できる状態で保ちます。
 
-- **左側 — 写真：** 元の風景を、写真として認識できる状態で残します。
-- **右側 — ラバースタンプ：** 同じ風景から重要な輪郭・色・空間関係だけを抽出し、古い紙に押した多色の手彫りスタンプとして再構成します。
+➡️ **右側 · ラバースタンプ：** 同じ風景を必要な形と色に絞り込み、古びた温かみのある紙に押した小さな多色の手彫りスタンプとして表現します。
 
-単なる写真フィルターやベクター化ではなく、同じ風景を二つの方法で記録することが目的です。
+1️⃣ 人物、動物、建築、物体、風景、姿勢、向き、空間関係はアップロードされた写真を基準に保ちます。
 
-**写真は現場を残し、スタンプは記憶を残します。**
+2️⃣ スタンプには、同じ風景だと認識するために必要なシルエット、ランドマーク、水平線、姿勢、色の関係、構造的な手がかりだけを残します。
 
-```text
-PHOTO  →  PRESERVE  →  DISTILL  →  STAMP  →  ARCHIVE
-```
+3️⃣ 途切れた輪郭、かすれたインク、不均一な圧力、顔料の粒子、紙の繊維、わずかな版ズレによって手刷りらしい質感を作ります。
 
 ---
 
 ## 🖼️ 作例
 
 <p align="center">
-  <img src="./examples/mountain-reflections.png" width="48%" alt="Mountain Reflections">
-  <img src="./examples/arctic-sailing.png" width="48%" alt="Arctic Sailing">
-</p>
-
-<p align="center">
-  <sub>Mountain Reflections · Arctic Sailing</sub>
-</p>
-
-> これらは完成作品の公開ギャラリーです。Skill 実行時の隠れた参照画像やスタイル条件としては使用されません。
-
-### 3×3 シーン多様性テスト
-
-<p align="center">
-  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="ウォールデン池">
-  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="砂漠の道">
-  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="雪原の犬">
+  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="Walden Pond">
+  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="Desert Road">
+  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="Snowy Dog">
 </p>
 <p align="center">
-  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="ゴシック教会の塔">
-  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="旧市街の路地">
-  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="街路を走るトラム">
+  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="Gothic Church Tower">
+  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="Old Town Alley">
+  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="City Tram Street">
 </p>
 <p align="center">
-  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="港の漁船">
-  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="リガの横断歩道を渡る人々">
-  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="夜のトラム">
+  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="Fishing Boat Harbor">
+  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="Crowd Crossing Riga">
+  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="Night Tram">
 </p>
 
 <p align="center">
   <sub>自然 · 建築 · 都市 · 港 · 人物 · 夜景</sub>
 </p>
 
-9 回の独立生成により、異なる被写体でも写真の同一性、場面の関係、50/50 のジャーナル構成が安定して保たれることを確認しています。元写真は Pexels 提供で、リガの群衆写真は Vlad Fonsark によるものです。
+> これらは公開ギャラリー用の完成作品です。実行時の参照画像や隠れたスタイル条件としては使用されません。
 
----
-
-## ✨ 写真から残すもの
-
-- **写真は写真のまま。** 人物、動物、建築、物体、風景、姿勢、向き、空間関係はアップロードされた写真を基準に保ちます。
-- **スタンプは視覚的な記憶。** シルエット、ランドマーク、水平線、姿勢、色の関係、場面構造など、同じ風景だと認識するために必要な要素だけを残します。
-- **素材感は手仕事らしく。** 途切れた輪郭、かすれたインク、不均一な圧力、顔料の粒子、紙の繊維、わずかな版ズレによって物理的なスタンプらしさを作ります。
+> 元写真：[Pexels](https://www.pexels.com/)。異なる題材でも、写真の同一性、場面の関係、50/50 のジャーナル構成を安定して保ちます。
 
 ---
 
 ## 🚀 クイックスタート
 
-### 1. インストール
+### 💻 方法 1 · Codex Skill
+
+#### 1. インストール
 
 ```bash
 git clone https://github.com/Beverly621/photo-rubber-stamp-journal-skill.git
@@ -101,23 +81,41 @@ cp -R \
 
 Skill がすぐに表示されない場合は Codex を再起動してください。
 
-### 2. 写真をアップロード
+#### 2. 写真をアップロード
 
-新しい Codex の会話を開始し、変換したい写真を添付します。
+新しい会話を開始し、変換したい写真を添付します。
 
-### 3. Skill を実行
+1枚でも複数枚でもアップロードできます。各写真は独立したジョブとして処理されます。
+
+#### 3. Skill を実行
 
 ```text
 Use $photo-rubber-stamp-journal to transform this photo.
 ```
 
-これだけです。
+複数写真の場合：
 
----
+```text
+Use $photo-rubber-stamp-journal to transform each uploaded photo into an independent poster.
+```
 
-## 🏷️ オプション情報
+### 📱 方法 2 · モバイル Work
 
-タイトル、番号、年を指定することもできます。
+モバイルで **Work** を開き、写真を添付して次のように入力します。
+
+```text
+このリポジトリから photo-rubber-stamp-journal Skill のルールを読み取ってください：
+
+https://github.com/Beverly621/photo-rubber-stamp-journal-skill
+
+そのルールを使って、添付した写真を変換してください。
+```
+
+> Work は現在のタスク内でリポジトリのルールを直接読み取り、実行できます。Skill を永続的にインストールする必要はありません。
+
+**オプションの上書き**
+
+タイトル、番号、年はデフォルトで自動生成されます。指定したい場合だけ追加してください。
 
 ```text
 Theme or title: Arctic Sailing
@@ -125,50 +123,7 @@ Number: 07
 Year: 2026
 ```
 
-指定されていない項目は自動生成されます。
-
----
-
-## 🖼️ 複数写真の処理
-
-一度に複数の写真をアップロードできます。
-
-各写真は**独立した生成ジョブ**として処理されます。
-
-```text
-3 source photos
-      ↓
-3 independent generations
-      ↓
-3 finished posters
-```
-
-人物、場所、色、物体、シーン情報が別の写真と混ざることはありません。
-
----
-
-## 🧩 Skill の仕組み
-
-ランタイム構成は意図的に小さく保っています。
-
-```text
-SKILL.md
-   ↓
-generation-prompt.md
-   ↓
-image generation
-   ↓
-quality-gate.md
-   ↓
-finished poster
-```
-
-- `SKILL.md` — 実行フローと写真ごとの分離
-- `references/generation-prompt.md` — 正式な production prompt
-- `references/quality-gate.md` — 生成後のビジュアル検査
-- `evals/evals.json` — 重要な挙動の回帰テスト
-
-ビジュアルスタイルの基準は production prompt に一本化されています。
+必要であれば、同じ項目をモバイル Work のプロンプト末尾に追加できます。
 
 ---
 
@@ -181,10 +136,16 @@ photo-rubber-stamp-journal-skill/
 ├── README.ja.md
 ├── LICENSE
 ├── examples/
-│   ├── mountain-reflections.png
-│   ├── arctic-sailing.png
 │   └── test-matrix/
-│       └── 9 点のシーン多様性ポスター
+│       ├── 01-walden-pond.png
+│       ├── 02-desert-road.png
+│       ├── 03-snowy-dog.png
+│       ├── 04-gothic-church-tower.png
+│       ├── 05-old-town-alley.png
+│       ├── 06-city-tram-street.png
+│       ├── 07-fishing-boat-harbor.png
+│       ├── 08-crowd-crossing-riga.png
+│       └── 09-night-tram.png
 ├── evals/
 │   └── evals.json
 └── skills/
@@ -209,9 +170,8 @@ Skill、production prompt、quality gate、evals、および関連するリポ�
 
 <div align="center">
 
-**左には現実の風景を。  
-右にはインクで残した記憶を。**
+**風景を残し、印を残す。**
 
-📷 → 🪵 → 🖋️ → 📖
+📷 → 🖋️ → 📖
 
 </div>

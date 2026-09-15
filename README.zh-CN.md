@@ -2,7 +2,7 @@
 
 # 🧳 Photo Rubber-Stamp Journal
 
-**把真实照片留在左边，把最值得记住的场景刻成右边的一枚纸上印记。**
+**把一张照片，变成一页安静的旅行手账。**
 
 <p>
   <a href="./README.md">🇬🇧 <b>English</b></a>
@@ -21,75 +21,55 @@
 
 ---
 
-## 📖 关于
+## 👀 关于
 
-**Photo Rubber-Stamp Journal** 是一个面向 Codex 的图像生成 Skill，可以把每张上传照片独立转换成一张 **4:3 横向旅行日志海报**。
+**Photo Rubber-Stamp Journal** 是一个用于图像生成的 Codex Skill，会把每张上传照片独立转换成一张采用精确 **50/50 分栏**的 **4:3 旅行手账海报**。
 
-画面在正中间一分为二：
+⬅️ **左侧 · 摄影：** 上传的场景保持可辨认，并保留真实摄影质感。
 
-- **左侧 — 真实摄影：** 保留照片本身的主体、关系与可辨识细节。
-- **右侧 — 橡皮章记忆：** 从同一场景中提炼最重要的轮廓、色彩和空间关系，以多色手刻橡皮章的方式印在旧纸上。
+➡️ **右侧 · 橡皮章：** 同一场景被提炼成一枚紧凑的多色手刻橡皮章，印在做旧的暖白纸面上。
 
-它不是简单的滤镜，也不是把照片重新画一遍，而是让同一个场景同时拥有两种记录方式：
+1️⃣ 人物、动物、建筑、物体、风景、姿态、朝向与空间关系都以上传原图为依据。
 
-**照片记录现场，印章留下记忆。**
+2️⃣ 印章只保留足以识别同一场景的轮廓、地标、地平线、姿态、色彩关系与结构线索。
 
-```text
-照片  →  保留  →  提炼  →  刻印  →  归档
-```
+3️⃣ 断裂轮廓、干墨、压力不均、颜料颗粒、纸张纤维与轻微套色偏移共同形成真实的手工印刷质感。
 
 ---
 
-## 🖼️ 示例作品
+## 🖼️ 示例
 
 <p align="center">
-  <img src="./examples/mountain-reflections.png" width="48%" alt="Mountain Reflections">
-  <img src="./examples/arctic-sailing.png" width="48%" alt="Arctic Sailing">
-</p>
-
-<p align="center">
-  <sub>Mountain Reflections · Arctic Sailing</sub>
-</p>
-
-> 这里展示的是最终成品，仅用于公开预览。Skill 运行时不会把这些示例作为隐藏参考图或风格条件。
-
-### 3×3 多场景测试矩阵
-
-<p align="center">
-  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="瓦尔登湖">
-  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="沙漠公路">
-  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="雪地犬">
+  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="Walden Pond">
+  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="Desert Road">
+  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="Snowy Dog">
 </p>
 <p align="center">
-  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="哥特式教堂塔楼">
-  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="老城小巷">
-  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="城市电车街景">
+  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="Gothic Church Tower">
+  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="Old Town Alley">
+  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="City Tram Street">
 </p>
 <p align="center">
-  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="港口渔船">
-  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="里加人群过街">
-  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="夜间电车">
+  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="Fishing Boat Harbor">
+  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="Crowd Crossing Riga">
+  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="Night Tram">
 </p>
 
 <p align="center">
   <sub>自然 · 建筑 · 城市 · 港口 · 人物 · 夜景</sub>
 </p>
 
-九次独立生成用于验证：面对不同题材时，照片身份、场景关系与 50/50 手账版式仍能保持稳定。原始照片来自 Pexels；里加人群照片由 Vlad Fonsark 拍摄。
+> 这些是公开展示用的最终成品，不会在运行时作为参考图或隐藏的风格条件使用。
 
----
-
-## ✨ 它保留什么
-
-- **照片仍然是真实照片。** 人物、动物、建筑、物体、风景、姿势、朝向和空间关系都以用户上传的原图为依据。
-- **印章只留下最重要的记忆。** 保留主体轮廓、地标、地平线、动作、主色关系和场景结构，同时去除不必要的摄影细节。
-- **材质必须像真的印出来。** 断裂轮廓、干墨、压力不均、颗粒、纸纤维以及轻微套色误差，共同形成真实的手工橡皮章质感。
+> 原图素材来源：[Pexels](https://www.pexels.com/)。面对不同题材时，照片身份、场景关系与 50/50 手账版式仍能保持稳定。
 
 ---
 
 ## 🚀 快速开始
 
-### 1. 安装
+### 💻 方法一 · Codex Skill
+
+#### 1. 安装
 
 ```bash
 git clone https://github.com/Beverly621/photo-rubber-stamp-journal-skill.git
@@ -101,23 +81,41 @@ cp -R \
 
 如果 Skill 没有立即出现，请重启 Codex。
 
-### 2. 上传照片
+#### 2. 上传
 
-开启新的 Codex 对话，上传一张想要制作的照片。
+开启一个新对话，并附上你想转换的照片。
 
-### 3. 调用 Skill
+可以一次上传一张或多张照片。每张原图都会作为独立任务处理。
+
+#### 3. 调用
 
 ```text
 Use $photo-rubber-stamp-journal to transform this photo.
 ```
 
-完成。
+多张照片时：
 
----
+```text
+Use $photo-rubber-stamp-journal to transform each uploaded photo into an independent poster.
+```
 
-## 🏷️ 可选信息
+### 📱 方法二 · 移动端 Work
 
-你可以额外指定标题、编号或年份：
+在移动端打开 **Work**，上传照片，然后输入：
+
+```text
+读取这个仓库中的 photo-rubber-stamp-journal Skill 规则：
+
+https://github.com/Beverly621/photo-rubber-stamp-journal-skill
+
+使用这些规则处理我上传的照片。
+```
+
+> Work 可以在当前任务中直接读取并执行仓库规则，无需永久安装 Skill。
+
+**可选覆盖项**
+
+默认情况下，标题、编号和年份都会自动生成。只有在你想主动指定时才需要填写：
 
 ```text
 Theme or title: Arctic Sailing
@@ -125,54 +123,7 @@ Number: 07
 Year: 2026
 ```
 
-没有填写的字段会自动生成。
-
-因此最简单的使用方式仍然是：
-
-**上传照片 → 调用 Skill。**
-
----
-
-## 🖼️ 多图处理
-
-一次可以上传多张照片。
-
-每张照片都会作为一个**独立任务**处理：
-
-```text
-3 张原始照片
-      ↓
-3 次独立生成
-      ↓
-3 张独立成品
-```
-
-不同照片之间不会混用人物、地点、颜色、物体或场景信息。
-
----
-
-## 🧩 Skill 如何工作
-
-项目刻意保持了一个很轻的运行结构：
-
-```text
-SKILL.md
-   ↓
-generation-prompt.md
-   ↓
-图像生成
-   ↓
-quality-gate.md
-   ↓
-最终成品
-```
-
-- `SKILL.md` — 负责执行流程与多图隔离
-- `references/generation-prompt.md` — 完整 production prompt，也是视觉风格的唯一基准
-- `references/quality-gate.md` — 对实际生成结果进行视觉检查
-- `evals/evals.json` — 保存重要行为的回归测试场景
-
-视觉规则集中在 production prompt 中，不需要在多个文件里重复维护。
+需要时，也可以把同样的字段直接追加到移动端 Work 提示词末尾。
 
 ---
 
@@ -185,10 +136,16 @@ photo-rubber-stamp-journal-skill/
 ├── README.ja.md
 ├── LICENSE
 ├── examples/
-│   ├── mountain-reflections.png
-│   ├── arctic-sailing.png
 │   └── test-matrix/
-│       └── 9 张多场景测试海报
+│       ├── 01-walden-pond.png
+│       ├── 02-desert-road.png
+│       ├── 03-snowy-dog.png
+│       ├── 04-gothic-church-tower.png
+│       ├── 05-old-town-alley.png
+│       ├── 06-city-tram-street.png
+│       ├── 07-fishing-boat-harbor.png
+│       ├── 08-crowd-crossing-riga.png
+│       └── 09-night-tram.png
 ├── evals/
 │   └── evals.json
 └── skills/
@@ -207,15 +164,14 @@ photo-rubber-stamp-journal-skill/
 
 本项目采用 [MIT License](./LICENSE)。
 
-Skill、production prompt、quality gate、evals 以及仓库中的相关材料均可在 MIT License 条款下使用、修改与重新分发。
+Skill、production prompt、quality gate、evals 以及相关仓库材料均可在 MIT License 条款下使用、修改和重新分发。
 
 ---
 
 <div align="center">
 
-**左边是真实发生过的场景。  
-右边是留在纸上的记忆。**
+**留住场景，留下印记。**
 
-📷 → 🪵 → 🖋️ → 📖
+📷 → 🖋️ → 📖
 
 </div>
