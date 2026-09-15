@@ -1,0 +1,53 @@
+{
+  "skill_name": "photo-rubber-stamp-journal",
+  "evals": [
+    {
+      "id": "landscape-no-metadata",
+      "prompt": "Use $photo-rubber-stamp-journal to transform this landscape photograph. I have not provided metadata.",
+      "expected_output": "Creates one independent 4:3 landscape poster with an exact 50/50 split, uses the actual uploaded photograph on the left, derives the stamp from that photograph, and auto-generates title, two-digit number, exactly three uppercase English keywords, and year.",
+      "files": []
+    },
+    {
+      "id": "architecture-fidelity",
+      "prompt": "Turn this architecture photograph into a rubber-stamp travel journal poster.",
+      "expected_output": "Preserves the source photograph on the left and retains the defining silhouette and relevant arches, dome, roof, tower, or facade rhythm in the simplified right-side stamp.",
+      "files": []
+    },
+    {
+      "id": "people-fidelity",
+      "prompt": "Make a photo-and-rubber-stamp journal poster from this photograph of people.",
+      "expected_output": "Keeps person count, pose, orientation, distinctive shapes, and spatial relationships consistent with the actual uploaded photograph while simplifying the stamp rendering.",
+      "files": []
+    },
+    {
+      "id": "full-user-metadata",
+      "prompt": "Use $photo-rubber-stamp-journal with Theme or title: Arctic Sailing, Number: 07, Year: 2026.",
+      "expected_output": "Reproduces the exact title 'Arctic Sailing', number '07', and year '2026' in the four-line archival block without rewriting any supplied value.",
+      "files": []
+    },
+    {
+      "id": "unknown-location",
+      "prompt": "Transform this photo, but do not guess where it was taken.",
+      "expected_output": "When the location cannot be identified reliably, generates a concise one-to-three-word descriptive English title instead of inventing a geographic location.",
+      "files": []
+    },
+    {
+      "id": "multiple-photographs",
+      "prompt": "Transform all of these photographs with $photo-rubber-stamp-journal.",
+      "expected_output": "Creates exactly one independent poster per uploaded photograph, sends each actual source image to its own generation job, and prevents subject, location, palette, object, person, and architecture leakage across outputs.",
+      "files": []
+    },
+    {
+      "id": "text-structure-regression",
+      "prompt": "Create the finished journal poster and keep the archival metadata legible.",
+      "expected_output": "The right panel contains exactly four lines: title, 'No. [NUMBER]', exactly three uppercase English keywords separated by bullets, and year, with correct spelling and no extra copy.",
+      "files": []
+    },
+    {
+      "id": "material-regression",
+      "prompt": "Make the right-side scene look like a genuine hand-carved rubber-stamp print on fibrous paper.",
+      "expected_output": "The actual raster shows irregular engraved contours, uneven ink, broken edges, dry gaps, granular pigment, paper bleed-through, pressure variation, and slight misregistration; it does not read as vector, watercolor, pencil, cartoon, digital illustration, or photo filter.",
+      "files": []
+    }
+  ]
+}

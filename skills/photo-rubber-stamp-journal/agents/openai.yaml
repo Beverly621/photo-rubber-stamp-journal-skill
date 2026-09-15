@@ -1,0 +1,4 @@
+interface:
+  display_name: "Photo Rubber-Stamp Journal"
+  short_description: "Turn photos into half-photo, half-rubber-stamp journal posters"
+  default_prompt: "Use $photo-rubber-stamp-journal to transform each uploaded photo into an independent 4:3 photo-and-rubber-stamp journal poster."
