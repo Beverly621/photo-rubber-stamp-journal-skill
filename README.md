@@ -51,6 +51,30 @@ PHOTO  →  PRESERVE  →  DISTILL  →  STAMP  →  ARCHIVE
 
 > These are finished example posters for the public gallery. They are not runtime reference images or style-conditioning assets.
 
+### 3×3 Scene-Diversity Test Matrix
+
+<p align="center">
+  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="Walden Pond">
+  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="Desert Road">
+  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="Snowy Dog">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="Gothic Church Tower">
+  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="Old Town Alley">
+  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="City Tram Street">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="Fishing Boat Harbor">
+  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="Crowd Crossing Riga">
+  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="Night Tram">
+</p>
+
+<p align="center">
+  <sub>Nature · Architecture · City · Harbor · People · Night</sub>
+</p>
+
+Nine independent runs verify that photo identity, scene relationships, and the 50/50 journal layout remain stable across varied subjects. Source photographs: Pexels; the Riga crowd photograph is by Vlad Fonsark.
+
 ---
 
 ## ✨ What It Preserves
@@ -154,7 +178,9 @@ photo-rubber-stamp-journal-skill/
 ├── LICENSE
 ├── examples/
 │   ├── mountain-reflections.png
-│   └── arctic-sailing.png
+│   ├── arctic-sailing.png
+│   └── test-matrix/
+│       └── 9 scene-diversity posters
 ├── evals/
 │   └── evals.json
 └── skills/

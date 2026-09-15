@@ -53,6 +53,30 @@
 
 > 这里展示的是最终成品，仅用于公开预览。Skill 运行时不会把这些示例作为隐藏参考图或风格条件。
 
+### 3×3 多场景测试矩阵
+
+<p align="center">
+  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="瓦尔登湖">
+  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="沙漠公路">
+  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="雪地犬">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="哥特式教堂塔楼">
+  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="老城小巷">
+  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="城市电车街景">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="港口渔船">
+  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="里加人群过街">
+  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="夜间电车">
+</p>
+
+<p align="center">
+  <sub>自然 · 建筑 · 城市 · 港口 · 人物 · 夜景</sub>
+</p>
+
+九次独立生成用于验证：面对不同题材时，照片身份、场景关系与 50/50 手账版式仍能保持稳定。原始照片来自 Pexels；里加人群照片由 Vlad Fonsark 拍摄。
+
 ---
 
 ## ✨ 它保留什么
@@ -162,7 +186,9 @@ photo-rubber-stamp-journal-skill/
 ├── LICENSE
 ├── examples/
 │   ├── mountain-reflections.png
-│   └── arctic-sailing.png
+│   ├── arctic-sailing.png
+│   └── test-matrix/
+│       └── 9 张多场景测试海报
 ├── evals/
 │   └── evals.json
 └── skills/

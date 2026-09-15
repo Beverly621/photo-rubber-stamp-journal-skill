@@ -53,6 +53,30 @@ PHOTO  →  PRESERVE  →  DISTILL  →  STAMP  →  ARCHIVE
 
 > これらは完成作品の公開ギャラリーです。Skill 実行時の隠れた参照画像やスタイル条件としては使用されません。
 
+### 3×3 シーン多様性テスト
+
+<p align="center">
+  <img src="./examples/test-matrix/01-walden-pond.png" width="32%" alt="ウォールデン池">
+  <img src="./examples/test-matrix/02-desert-road.png" width="32%" alt="砂漠の道">
+  <img src="./examples/test-matrix/03-snowy-dog.png" width="32%" alt="雪原の犬">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/04-gothic-church-tower.png" width="32%" alt="ゴシック教会の塔">
+  <img src="./examples/test-matrix/05-old-town-alley.png" width="32%" alt="旧市街の路地">
+  <img src="./examples/test-matrix/06-city-tram-street.png" width="32%" alt="街路を走るトラム">
+</p>
+<p align="center">
+  <img src="./examples/test-matrix/07-fishing-boat-harbor.png" width="32%" alt="港の漁船">
+  <img src="./examples/test-matrix/08-crowd-crossing-riga.png" width="32%" alt="リガの横断歩道を渡る人々">
+  <img src="./examples/test-matrix/09-night-tram.png" width="32%" alt="夜のトラム">
+</p>
+
+<p align="center">
+  <sub>自然 · 建築 · 都市 · 港 · 人物 · 夜景</sub>
+</p>
+
+9 回の独立生成により、異なる被写体でも写真の同一性、場面の関係、50/50 のジャーナル構成が安定して保たれることを確認しています。元写真は Pexels 提供で、リガの群衆写真は Vlad Fonsark によるものです。
+
 ---
 
 ## ✨ 写真から残すもの
@@ -158,7 +182,9 @@ photo-rubber-stamp-journal-skill/
 ├── LICENSE
 ├── examples/
 │   ├── mountain-reflections.png
-│   └── arctic-sailing.png
+│   ├── arctic-sailing.png
+│   └── test-matrix/
+│       └── 9 点のシーン多様性ポスター
 ├── evals/
 │   └── evals.json
 └── skills/
