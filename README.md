@@ -1,27 +1,69 @@
-# Photo Rubber-Stamp Journal
+<div align="center">
 
-Transform an uploaded photograph into a quiet 4:3 split travel-journal poster: source-faithful photography on the left, and a hand-carved rubber-stamp memory on aged paper on the right.
+# 🧳 Photo Rubber-Stamp Journal
 
-将每张上传照片独立转换为一张 4:3 旅行日志海报：左侧保留真实摄影，右侧以手工橡皮章保存场景记忆。
+**Turn a photograph into a quiet field-journal spread — real scene on the left, hand-stamped memory on the right.**
 
-## Examples
+<p>
+  <a href="./README.md">🇬🇧 <b>English</b></a>
+  &nbsp; · &nbsp;
+  <a href="./README.zh-CN.md">🇨🇳 <b>简体中文</b></a>
+  &nbsp; · &nbsp;
+  <a href="./README.ja.md">🇯🇵 <b>日本語</b></a>
+</p>
 
-| Mountain Reflections | Arctic Sailing |
-| --- | --- |
-| ![Mountain Reflections finished poster](examples/mountain-reflections.png) | ![Arctic Sailing finished poster](examples/arctic-sailing.png) |
+<p>
+  <img src="https://img.shields.io/badge/Codex-Skill-111111?style=flat-square" alt="Codex Skill">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT License"></a>
+</p>
 
-These are finished example posters and a public visual gallery only. They are not source/result pairs, runtime style-conditioning assets, hidden references, or eval fixtures. At runtime, the skill derives each poster from the user's own source photograph and the canonical production prompt.
+</div>
 
-## Core behavior
+---
 
-- One image produces one poster.
-- Multiple images produce independent posters with no cross-image content mixing.
-- Every poster uses a 4:3 landscape canvas and an exact 50/50 visual split.
-- The left side preserves the real photograph; the right side is a source-derived rubber-stamp interpretation.
-- The right panel includes a four-line archival metadata block.
-- A central raster-quality failure triggers at most one targeted retry for that image.
+## 📖 About
 
-## Installation
+**Photo Rubber-Stamp Journal** is a Codex image-generation Skill that turns each uploaded photograph into an independent **4:3 travel-journal poster**.
+
+The composition is split exactly in half:
+
+- **Left — Photograph:** the uploaded scene stays recognizable and photographic.
+- **Right — Rubber stamp:** the same scene is distilled into a compact, hand-carved multi-color stamp on aged paper.
+
+The result is meant to feel like a small collectible field-journal spread rather than a generic photo filter or vector illustration.
+
+```text
+PHOTO  →  PRESERVE  →  DISTILL  →  STAMP  →  ARCHIVE
+```
+
+---
+
+## 🖼️ Examples
+
+<p align="center">
+  <img src="./examples/mountain-reflections.png" width="48%" alt="Mountain Reflections">
+  <img src="./examples/arctic-sailing.png" width="48%" alt="Arctic Sailing">
+</p>
+
+<p align="center">
+  <sub>Mountain Reflections · Arctic Sailing</sub>
+</p>
+
+> These are finished example posters for the public gallery. They are not runtime reference images or style-conditioning assets.
+
+---
+
+## ✨ What It Preserves
+
+- **Photography stays photography.** People, animals, architecture, objects, scenery, pose, orientation, and spatial relationships remain tied to the uploaded source.
+- **The stamp becomes a visual memory.** It keeps only the silhouettes, landmarks, horizons, poses, color relationships, and structural cues needed to recognize the same scene.
+- **The material stays physical.** Broken contours, dry ink, uneven pressure, pigment grain, paper fibers, and subtle color misregistration create a hand-printed result.
+
+---
+
+## 🚀 Quick Start
+
+### 1. Install
 
 ```bash
 git clone https://github.com/Beverly621/photo-rubber-stamp-journal-skill.git
@@ -31,15 +73,25 @@ cp -R \
   ~/.codex/skills/
 ```
 
-Restart Codex if the skill does not appear immediately.
+Restart Codex if the Skill does not appear immediately.
 
-## Usage
+### 2. Upload a photo
+
+Start a new Codex conversation and attach the photograph you want to transform.
+
+### 3. Run the Skill
 
 ```text
 Use $photo-rubber-stamp-journal to transform this photo.
 ```
 
-Optional metadata:
+That's it.
+
+---
+
+## 🏷️ Optional Metadata
+
+You can optionally provide a title, number, or year:
 
 ```text
 Theme or title: Arctic Sailing
@@ -47,16 +99,62 @@ Number: 07
 Year: 2026
 ```
 
-Missing metadata is generated automatically according to the production prompt.
+Any missing field is generated automatically.
 
-## Repository structure
+---
+
+## 🖼️ Multiple Photos
+
+Multiple photographs can be uploaded in one request. Each source photo is treated as its **own independent generation job**.
 
 ```text
-.
+3 source photos
+      ↓
+3 independent generations
+      ↓
+3 finished posters
+```
+
+Subjects, locations, colors, people, and objects are kept isolated between images.
+
+---
+
+## 🧩 How the Skill Is Built
+
+The runtime architecture stays intentionally small:
+
+```text
+SKILL.md
+   ↓
+generation-prompt.md
+   ↓
+image generation
+   ↓
+quality-gate.md
+   ↓
+finished poster
+```
+
+- `SKILL.md` — workflow and photo isolation
+- `references/generation-prompt.md` — canonical production prompt
+- `references/quality-gate.md` — post-generation visual inspection
+- `evals/evals.json` — regression cases for important behaviors
+
+The production prompt remains the single source of truth for the visual style.
+
+---
+
+## 📁 Repository Structure
+
+```text
+photo-rubber-stamp-journal-skill/
 ├── README.md
+├── README.zh-CN.md
+├── README.ja.md
 ├── LICENSE
-├── .gitignore
 ├── examples/
+│   ├── mountain-reflections.png
+│   └── arctic-sailing.png
 ├── evals/
 │   └── evals.json
 └── skills/
@@ -69,8 +167,20 @@ Missing metadata is generated automatically according to the production prompt.
             └── quality-gate.md
 ```
 
-`SKILL.md` handles invocation and job isolation. `references/generation-prompt.md` is the sole source of truth for visual generation. `references/quality-gate.md` defines post-generation raster inspection and the single-retry policy. `evals/evals.json` records high-risk regression behaviors.
+---
 
-## License
+## 📄 License
 
-MIT License. The Skill instructions, production prompt, quality gate, evals, and related repository materials are distributed under the repository's MIT License.
+Released under the [MIT License](./LICENSE).
+
+The Skill, production prompt, quality gate, evals, and related repository materials may be used, modified, and redistributed under the terms of the MIT License.
+
+---
+
+<div align="center">
+
+**A real scene on the left. A memory in ink on the right.**
+
+📷 → 🪵 → 🖋️ → 📖
+
+</div>
