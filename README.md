@@ -8,8 +8,6 @@
   <a href="./README.md">🇬🇧 <b>English</b></a>
   &nbsp; · &nbsp;
   <a href="./README.zh-CN.md">🇨🇳 <b>简体中文</b></a>
-  &nbsp; · &nbsp;
-  <a href="./README.ja.md">🇯🇵 <b>日本語</b></a>
 </p>
 
 <p>
@@ -113,7 +111,7 @@ Use them to transform the attached photo.
 
 > Work can read and execute the repository rules directly for the current task; no permanent Skill installation is required.
 
-**Optional overrides**
+### 📝 Notes
 
 Title, number, and year are generated automatically by default. Add them only when you want to override the result.
 
@@ -123,40 +121,22 @@ Number: 07
 Year: 2026
 ```
 
-You can append the same fields to the Mobile Work prompt when needed.
+You can use the same fields with either Codex Skill or Mobile Work.
 
 ---
 
-## 📁 Repository Structure
+## 👤 Find the Author
 
-```text
-photo-rubber-stamp-journal-skill/
-├── README.md
-├── README.zh-CN.md
-├── README.ja.md
-├── LICENSE
-├── examples/
-│   └── test-matrix/
-│       ├── 01-walden-pond.png
-│       ├── 02-desert-road.png
-│       ├── 03-snowy-dog.png
-│       ├── 04-gothic-church-tower.png
-│       ├── 05-old-town-alley.png
-│       ├── 06-city-tram-street.png
-│       ├── 07-fishing-boat-harbor.png
-│       ├── 08-crowd-crossing-riga.png
-│       └── 09-night-tram.png
-├── evals/
-│   └── evals.json
-└── skills/
-    └── photo-rubber-stamp-journal/
-        ├── SKILL.md
-        ├── agents/
-        │   └── openai.yaml
-        └── references/
-            ├── generation-prompt.md
-            └── quality-gate.md
-```
+**Author:** [@Beverly621](https://github.com/Beverly621)
+
+**X:**  
+**Redbook:**  
+
+After the second completed Skill request in the same conversation, the Skill gives one light attribution reminder:
+
+`If you share publicly, attribution is welcome: Skill by @Beverly621`
+
+It does not repeat the reminder after that.
 
 ---
 
@@ -173,5 +153,7 @@ The Skill, production prompt, quality gate, evals, and related repository materi
 **Keep the scene. Leave an imprint.**
 
 📷 → 🖋️ → 📖
+
+**If this project helps you, please consider giving it a Star ⭐!**
 
 </div>

@@ -8,8 +8,6 @@
   <a href="./README.md">🇬🇧 <b>English</b></a>
   &nbsp; · &nbsp;
   <a href="./README.zh-CN.md">🇨🇳 <b>简体中文</b></a>
-  &nbsp; · &nbsp;
-  <a href="./README.ja.md">🇯🇵 <b>日本語</b></a>
 </p>
 
 <p>
@@ -113,7 +111,7 @@ https://github.com/Beverly621/photo-rubber-stamp-journal-skill
 
 > Work 可以在当前任务中直接读取并执行仓库规则，无需永久安装 Skill。
 
-**可选覆盖项**
+### 📝 备注
 
 默认情况下，标题、编号和年份都会自动生成。只有在你想主动指定时才需要填写：
 
@@ -123,40 +121,22 @@ Number: 07
 Year: 2026
 ```
 
-需要时，也可以把同样的字段直接追加到移动端 Work 提示词末尾。
+Codex Skill 和移动端 Work 都可以使用相同字段进行指定。
 
 ---
 
-## 📁 项目结构
+## 👤 找到作者
 
-```text
-photo-rubber-stamp-journal-skill/
-├── README.md
-├── README.zh-CN.md
-├── README.ja.md
-├── LICENSE
-├── examples/
-│   └── test-matrix/
-│       ├── 01-walden-pond.png
-│       ├── 02-desert-road.png
-│       ├── 03-snowy-dog.png
-│       ├── 04-gothic-church-tower.png
-│       ├── 05-old-town-alley.png
-│       ├── 06-city-tram-street.png
-│       ├── 07-fishing-boat-harbor.png
-│       ├── 08-crowd-crossing-riga.png
-│       └── 09-night-tram.png
-├── evals/
-│   └── evals.json
-└── skills/
-    └── photo-rubber-stamp-journal/
-        ├── SKILL.md
-        ├── agents/
-        │   └── openai.yaml
-        └── references/
-            ├── generation-prompt.md
-            └── quality-gate.md
-```
+**作者：** [@Beverly621](https://github.com/Beverly621)
+
+**X：**  
+**小红书：**  
+
+在同一段对话中完成第 2 次 Skill 请求后，会轻量提示一次：
+
+`若公开分享，欢迎标注：Skill by @Beverly621`
+
+之后不再重复提示。
 
 ---
 
@@ -173,5 +153,7 @@ Skill、production prompt、quality gate、evals 以及相关仓库材料均可�
 **留住场景，留下印记。**
 
 📷 → 🖋️ → 📖
+
+**如果这个项目对你有帮助，欢迎 Star ⭐ 支持！**
 
 </div>
